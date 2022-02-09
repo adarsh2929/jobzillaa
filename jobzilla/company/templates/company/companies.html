@@ -1,0 +1,42 @@
+{% extends 'company/company-profile.html' %}
+{% load static %}
+
+
+{% block content %}
+ 
+<section class="companies-info">
+
+<div class="container">
+<div class="company-title">
+<h3>All Companies</h3>
+</div>
+
+<div class="companies-list">
+{% for i in call %}
+<div class="row">
+	<div class="col-lg-3 col-md-4 col-sm-6">
+	<div class="company_profile_info">
+			<div class="company-up-info">
+			<img src="{{i.company_logo.url}}" alt="" style="height: auto; width: auto;">
+<!-- ________ i means Number(1,2,3,4,5) or i.company_name means (1.acompany,2.bcompany,3.company etc)-->			
+<!-- _____________ for loop may name k sath number print karna hu tu print(i.name) write karte hai-->	
+			<h3>{{i.company_name}}</h3>
+			<h4>{{i.company_contact}}</h4>
+			<ul>
+			<li><a href="#" title="" class="follow">Follow</a></li>
+			<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
+			</ul>
+			</div>			
+	<a href="{% url 'othercompanyprofile' pk=i.id %}" title="" class="view-more-pro">View Profile</a>
+	</div>
+	</div>
+		
+
+	{% endfor %}
+	
+</div>
+</div>
+</div>
+</section>
+
+{% endblock %}

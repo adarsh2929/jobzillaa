@@ -1,0 +1,96 @@
+{% extends 'company/company-profile.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<section class="profile-account-setting">
+<div class="container">
+<div class="account-tabs-setting">
+<div class="row">
+<div class="col-lg-3">
+<div class="acc-leftbar">
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+<a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-picture" role="tab" aria-controls="nav-picture" aria-selected="false"><i class="fa fa-lock"></i>Change Profile</a>
+
+<a class="nav-item nav-link" id="nav-picture-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Change Password</a>
+
+
+<a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-user-secret"></i>Change Password</a>
+
+
+<a class="nav-item nav-link" id="nav-deactivate-tab" data-toggle="tab" href="#nav-deactivate" role="tab" aria-controls="nav-deactivate" aria-selected="false"><i class="fa fa-random"></i>Deactivate Account</a>
+
+</div>
+</div>
+</div>
+<!-- _________________________________________________________________________ Account Setting ____________-->
+    <div class="col-lg-9">
+    <div class="tab-content" id="nav-tabContent">
+  
+   
+    <!-- _________________________________________ Company Details Account _________________________-->
+
+    <!-- _______ "Show Active" use for First page per aane _________-->
+    <div class="tab-pane fade show active" id="nav-deactivate" role="tabpanel" aria-labelledby="nav-deactivate-tab">
+    <div class="acc-setting">
+    <h3>Company Details Account</h3>
+    <form>
+    <div class="cp-field">
+    <h5>Overview</h5>
+    <div class="cpp-fiel">
+    <input type="text" name="Overview" placeholder="Overview" value="{{cid.user_id.email}}" readonly disabled>
+    <i class="fa fa-envelope"></i>
+    </div>
+    </div>
+
+    <div class="cp-field">
+        <h5>Establish</h5>
+        <div class="cpp-fiel">
+        <input type="text" name="Establish" placeholder="Establish Since" value="{{cid.user_id.establish}}" readonly disabled>
+        <i class="fa fa-envelope"></i>
+        </div>
+    </div>
+
+    <div class="cp-field">
+        <h5> Total Employee</h5>
+        <div class="cpp-fiel">
+        <input type="text" name="Temployee" placeholder="Total Employee" value="{{cid.user_id.temployee}}" readonly disabled>
+        <i class="fa fa-envelope"></i>
+        </div>
+    </div>
+
+    <div class="cp-field">
+    <h5>Please Explain Further</h5>
+    <textarea></textarea>
+    </div>
+    <div class="cp-field">
+    <div class="fgt-sec">
+    <input type="checkbox" name="cc" id="c4">
+    <label for="c4">
+    <span></span>
+    </label>
+    <small>Email option out</small>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium nulla quis erat dapibus, varius hendrerit neque suscipit. Integer in ex euismod, posuere lectus id,</p>
+    </div>
+    <div class="save-stngs pd3">
+    <ul>
+    <li><button type="submit">Save Setting</button></li>
+    <li><button type="submit">Restore Setting</button></li>
+    </ul>
+    </div>
+    </form>
+    </div>
+    </div>
+
+        
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+{% endblock %}

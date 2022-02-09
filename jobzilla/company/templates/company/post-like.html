@@ -1,0 +1,140 @@
+{% extends 'company/company-profile.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<div class="container">
+<div class="account-tabs-setting">
+<div class="row">
+<div class="col-lg-3">
+<div class="acc-leftbar">
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+
+
+
+</div>
+</div>
+</div>
+ <div class="col-lg-12">
+ <div class="tab-content" id="nav-tabContent">
+
+
+
+<!-- _______________________________________________ Request ______________________________-->
+
+<div class="tab-pane fade show active" id="nav-companydetails" role="tabpanel" aria-labelledby="nav-companydetails-tab">
+<div class="acc-setting">
+<h3>Liked By</h3>
+{% for i in p_likes_by %}
+<div class="requests-list">
+<div class="request-details">
+<div class="noty-user-img">
+<img src="{% static 'company/images/resources/r-img1.png' %}" alt="">
+</div>
+<div class="request-info">
+<h3>{{i.client_id.user_name}}</h3>
+<span>Graphic Designer</span>
+</div>
+<div class="accept-feat">
+<ul>
+<li><button type="submit" class="accept-req">Accept</button></li>
+<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+</ul>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+<div class="request-details">
+<div class="noty-user-img">
+<img src="{% static 'company/images/resources/r-img2.png' %}" alt="">
+</div>
+<div class="request-info">
+<h3>John Doe</h3>
+<span>PHP Developer</span>
+</div>
+<div class="accept-feat">
+<ul>
+<li><button type="submit" class="accept-req">Accept</button></li>
+<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+</ul>
+</div>
+</div>
+<div class="request-details">
+<div class="noty-user-img">
+<img src="{% static 'company/images/resources/r-img3.png'%}" alt="">
+</div>
+<div class="request-info">
+<h3>Poonam</h3>
+<span>Wordpress Developer</span>
+</div>
+<div class="accept-feat">
+<ul>
+<li><button type="submit" class="accept-req">Accept</button></li>
+<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+</ul>
+</div>
+</div>
+<div class="request-details">
+<div class="noty-user-img">
+<img src="{% static 'company/images/resources/r-img4.png'%}" alt="">
+</div>
+<div class="request-info">
+<h3>Bill Gates</h3>
+<span>C & C++ Developer</span>
+</div>
+<div class="accept-feat">
+<ul>
+<li><button type="submit" class="accept-req">Accept</button></li>
+<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+</ul>
+</div>
+</div>
+<div class="request-details">
+<div class="noty-user-img">
+<img src="{% static 'company/images/resources/r-img5.png' %}" alt="">
+</div>
+<div class="request-info">
+<h3>Jessica William</h3>
+<span>Graphic Designer</span>
+</div>
+<div class="accept-feat">
+<ul>
+<li><button type="submit" class="accept-req">Accept</button></li>
+<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+</ul>
+</div>
+</div>
+<div class="request-details">
+<div class="noty-user-img">
+<img src="{% static 'company/images/resources/r-img6.png' %}" alt="">
+</div>
+<div class="request-info">
+<h3>John Doe</h3>
+<span>PHP Developer</span>
+</div>
+<div class="accept-feat">
+<ul>
+<li><button type="submit" class="accept-req">Accept</button></li>
+<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+        
+    </div>
+</section>
+
+{% endblock %}
